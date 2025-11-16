@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Bingo</title>
+  <!-- Un solo CSS mobile-first -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="main-layout">
+      <div class="panel">
+        <div class="info" id="plays">JUGADAS: 0/0</div>
+        <div class="letter-number-row">
+          <div class="letter" id="letter">?</div>
+          <div class="separator">-</div>
+          <div class="number" id="number">?</div>
+        </div>
+        <div class="panel-buttons">
+          <button id="playBtn" onclick="playBingo()">JUGAR</button>
+          <button onclick="resetBingo()">REINICIAR</button>
+        </div>
+
+        <button 
+          onclick="window.modal.showModal()" 
+          class="floating-button"
+          title="Acerca de">
+          <i class="fas fa-info-circle"></i>
+        </button>
+        <dialog id="modal" class="about">
+          <h2>Jose De La Cruz</h2>
+          <p>Desarrollador de Software</p>
+          <button onclick="window.modal.close();">Cerrar</button>
+        </dialog>   
+
+      </div>
+      <div class="bingo-matrix">
+        <table class="bingo-table" id="bingoTable">
+          <thead>
+            <tr>
+              <th>B</th>
+              <th>I</th>
+              <th>N</th>
+              <th>G</th>
+              <th>O</th>
+            </tr>
+          </thead>
+          <tbody id="bingoBody">
+            <!-- Se genera con JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

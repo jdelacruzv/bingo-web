@@ -1,0 +1,220 @@
+/* =====================
+   ESTILO BASE (MOBILE)
+   ===================== */
+body {
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 10px;
+  margin: 1% 0;
+  box-sizing: border-box;
+}
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.panel {
+  background: #333;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+}
+.info {
+  font-size: 1.25em;
+  letter-spacing: 2px;
+}
+.letter-number-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 2em; */
+  font-weight: bold;
+  margin: 12px 0;
+  color: #0dcaf0;
+}
+.letter {
+  font-size: 3em;
+  margin-right: 5px;
+}
+.separator {
+  font-size: 3em;
+  margin: 0 5px;
+}
+.number {
+  font-size: 3em;
+  margin-left: 5px;
+}
+.panel-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #28a745;
+  background-color: #198754;
+  color: #fff;
+  transition: background 0.3s;
+}
+button:hover:enabled {
+  background-color: #218838;
+  background-color: #157347;
+}
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+/* About - dialog */
+.about {
+  border: none;
+  border-radius: 10px;
+  padding: 16px 32px;
+  background: #444;
+  color: #fff;
+}
+.about h2 {
+  font-size: 2.2em;
+  letter-spacing: 1.2px;
+  margin-top: .4em;
+  margin-bottom: .2em;
+}
+.about p {
+  font-size: 1em;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+/* Boton flotante */
+.floating-button {
+  position: fixed;
+  top: 20px;    /* Distancia desde la parte superior */
+  left: 20px;  /* Distancia desde la derecha */
+  z-index: 1000;
+  background-color: #0dcaf0;
+  color: #333;
+  padding: 15px 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.floating-button:hover:enabled {
+    background-color: #31d2f2;
+    transition: background-color 0.3s, transform 0.3s;
+}
+/* Tabla de bingo */
+.bingo-matrix {
+  background: #333;
+  overflow-x: auto;
+}
+.bingo-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+.bingo-table th {
+  background: #0dcaf0;
+  color: #222;
+  padding: 8px;
+  border: 1px solid #444;
+}
+.bingo-table td {
+  border: 1px solid #444;
+  width: 30px;
+  height: 30px;
+}
+.bingo-table td.marked {
+  color: #0dcaf0;
+  font-weight: bold;
+}
+/* =====================
+   ESCRITORIO
+   ===================== */
+@media (min-width: 769px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 1000px;
+    width: 100%;
+    height: calc(100vh - 20px); /* altura de la ventana menos padding */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex: 1;               /* ocupa toda la altura disponible */
+    align-items: stretch;
+  }
+  .panel {
+    flex: 1;
+    margin-bottom: auto; 
+    padding: 1.5em 3em;
+  }
+  .info {
+    font-size: 1.5em;
+  }
+  .letter-number-row {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: .5em;
+  }
+  .floating-button:hover:enabled {
+    background-color: #31d2f2;
+    transform: scale(1.05); /* Ligeramente más grande */
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  /* BINGO-MATRIX se adapta proporcionalmente */
+  .bingo-matrix {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;       /* sin scroll interno */
+  }
+  .bingo-table {
+    font-size: calc(12px + 0.7vw); /* escala proporcional al ancho de pantalla */
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+  }
+  .bingo-table td {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1; /* celdas siempre cuadradas */
+  }
+}
