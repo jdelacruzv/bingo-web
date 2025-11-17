@@ -36,10 +36,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* font-size: 2em; */
   font-weight: bold;
   margin: 12px 0;
-  color: #0dcaf0;
+  color: #FFD700;
 }
 .letter {
   font-size: 3em;
@@ -65,13 +64,11 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #28a745;
   background-color: #198754;
   color: #fff;
   transition: background 0.3s;
 }
 button:hover:enabled {
-  background-color: #218838;
   background-color: #157347;
 }
 button:disabled {
@@ -105,7 +102,7 @@ button:disabled {
   top: 20px;    /* Distancia desde la parte superior */
   left: 20px;  /* Distancia desde la derecha */
   z-index: 1000;
-  background-color: #0dcaf0;
+  background-color: #FFD700;
   color: #333;
   padding: 15px 20px;
   border-radius: 50%;
@@ -120,7 +117,7 @@ button:disabled {
   text-decoration: none;
 }
 .floating-button:hover:enabled {
-    background-color: #31d2f2;
+    background-color: #FFC107;
     transition: background-color 0.3s, transform 0.3s;
 }
 /* Tabla de bingo */
@@ -135,7 +132,7 @@ button:disabled {
   font-size: 14px;
 }
 .bingo-table th {
-  background: #0dcaf0;
+  background: #FFD700;
   color: #222;
   padding: 8px;
   border: 1px solid #444;
@@ -146,7 +143,7 @@ button:disabled {
   height: 30px;
 }
 .bingo-table td.marked {
-  color: #0dcaf0;
+  color: #FFD700;
   font-weight: bold;
 }
 /* =====================
@@ -194,7 +191,7 @@ button:disabled {
     margin-bottom: .5em;
   }
   .floating-button:hover:enabled {
-    background-color: #31d2f2;
+    background-color: #FFC107;
     transform: scale(1.05); /* Ligeramente más grande */
     transition: background-color 0.3s, transform 0.3s;
   }
