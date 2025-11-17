@@ -5,4 +5,6 @@ The objective of the game is to complete a line (horizontally, vertically, or di
 numbers on the card. Depending on the rules, there may also be other ways to win, such as 
 filling the entire card or forming a specific shape.
 
+You can play it at: https://jdelacruzv.github.io/bingo-web/
+
 ![alt text](image.png)
